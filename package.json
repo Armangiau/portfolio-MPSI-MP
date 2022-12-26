@@ -1,0 +1,32 @@
+{
+  "name": "portfolio-mpsi",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start",
+    "test": "vitest",
+    "verif": "(vitest run && ts-standard --fix) || ts-standard --fix"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@master/css.vite": "",
+    "@solidjs/testing-library": "^0.5.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "jsdom": "^20.0.3",
+    "pre-commit": "^1.2.2",
+    "solid-start-node": "^0.2.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vitest": "^0.26.2"
+  },
+  "dependencies": {
+    "@master/css": "^2.0.0-beta.98",
+    "@solidjs/meta": "^0.28.0",
+    "@solidjs/router": "^0.6.0",
+    "solid-js": "^1.6.2",
+    "solid-start": "^0.2.0",
+    "ts-standard": "^12.0.2",
+    "undici": "^5.11.0"
+  }
+}
