@@ -4,7 +4,7 @@ export default {
     primary: '#7209b7',
     action: '#f72585',
     supText: '#84E2FF',
-    text: 'B8C5FF'
+    text: '#B8C5FF'
   },
   themes: {
     dark: {
@@ -13,7 +13,7 @@ export default {
         primary: '#7209b7',
         action: '#f72585',
         supText: '#84E2FF',
-        text: 'B8C5FF'
+        text: '#B8C5FF'
       }
     },
     light: {
