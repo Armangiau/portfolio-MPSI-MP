@@ -8,7 +8,7 @@ const Home: Component = () => {
       <h1>Hello world!</h1>
       <p>
         Visit{' '}
-        <a href='https://start.solidjs.com' target='_blank' rel='noreferrer' class="light btn flex:column">
+        <a href='https://start.solidjs.com' target='_blank' rel='noreferrer' class='light btn flex:column'>
           start.solidjs.com
         </a>{' '}
         to learn how to build SolidStart apps.

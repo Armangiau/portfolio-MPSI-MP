@@ -12,12 +12,11 @@ import {
   Scripts,
   Title
 } from 'solid-start'
-import './root.css'
 import 'master.css'
 
 const Root: Component = () => {
   return (
-    <Html lang='en' data-theme="light">
+    <Html lang='en'>
       <Head>
         <Title>SolidStart - Bare</Title>
         <Meta charset='utf-8' />
