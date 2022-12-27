@@ -2,6 +2,9 @@
 Rest css
 */
 *, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+    border-style: solid;
   margin: 0;
   padding: 0;
 }
@@ -11,7 +14,8 @@ Rest css
 Variables
 */
 :root {
-  --hsize: clamp(2rem, 5vw, 3rem);
+  --h1size: clamp(2rem, 5vw, 3rem);
+  --h2size: clamp(1.25rem, 3.75vw, 2rem);
   --psize: clamp(0.75rem, 2.5vw, 1.25rem);
 }
 
@@ -40,6 +44,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Righteous, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1 {
+  font-size: var(--h1size);
+}
+
+h2 {
+  font-size: var(--h2size);
+}
+
 p, body {
   font-size: var(--psize);
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }

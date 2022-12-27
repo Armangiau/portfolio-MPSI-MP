@@ -1,7 +1,6 @@
 // @refresh reload
 import { Component, Suspense } from 'solid-js'
 import {
-  A,
   Body,
   ErrorBoundary,
   FileRoutes,
@@ -12,9 +11,10 @@ import {
   Scripts,
   Title
 } from 'solid-start'
-import './root.css'
+import '~/root.css'
 import 'master.css'
-import { css } from './master'
+import { css } from '~/master'
+import Header from '~/components/Header/Header'
 
 const Root: Component = () => {
   return (
@@ -24,11 +24,10 @@ const Root: Component = () => {
         <Meta charset='utf-8' />
         <Meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <Body class='bg:background color:normText'>
+      <Body class='bg:background color:text border-color:text'>
         <Suspense>
           <ErrorBoundary>
-            <A href='/'>Index</A>
-            <A href='/about'>About</A>
+            <Header />
             <Routes>
               <FileRoutes />
             </Routes>

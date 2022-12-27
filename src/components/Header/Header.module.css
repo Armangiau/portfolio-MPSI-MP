@@ -1,0 +1,28 @@
+.underline a {
+  position: relative;
+}
+
+.underline a::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 0;
+  border-radius: 0 50% 0 50%;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background-color: #F0F5F4;
+}
+
+.underline a:hover::after {
+  content: "";
+  animation-name: underline;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes underline {
+  to {
+    width: 110%;
+  }
+}
