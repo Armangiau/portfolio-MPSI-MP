@@ -3,7 +3,7 @@ import { defineConfig } from 'vitest/config'
 import { MasterCSSVitePlugin } from '@master/css.vite'
 
 export default defineConfig({
-  plugins: [solid({ ssr: false }), MasterCSSVitePlugin()],
+  plugins: [MasterCSSVitePlugin(), solid({ ssr: false })],
   test: {
     deps: {
       registerNodeLoader: true

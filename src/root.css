@@ -1,0 +1,45 @@
+/*
+Rest css
+*/
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+Variables
+*/
+:root {
+  --hsize: clamp(2rem, 5vw, 3rem);
+  --psize: clamp(0.75rem, 2.5vw, 1.25rem);
+}
+
+/*
+Fonts
+*/
+@font-face {
+  font-family: Righteous;
+  src: url('/Righteous.woff2');
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('/Raleway.woff2');
+}
+
+/*
+Document defalt conf
+*/
+body {
+  font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Righteous, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p, body {
+  font-size: var(--psize);
+}

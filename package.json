@@ -7,6 +7,7 @@
     "test": "vitest",
     "verif": "(vitest run && ts-standard --fix) || ts-standard --fix"
   },
+  "pre-commit": ["verif"],
   "type": "module",
   "devDependencies": {
     "@master/css.vite": "",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "@master/css": "^2.0.0-beta.98",
+    "@master/normal.css": "^2.0.0-beta.99",
     "@solidjs/meta": "^0.28.0",
     "@solidjs/router": "^0.6.0",
     "solid-js": "^1.6.2",

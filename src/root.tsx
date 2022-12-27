@@ -12,17 +12,19 @@ import {
   Scripts,
   Title
 } from 'solid-start'
+import './root.css'
 import 'master.css'
+import { css } from './master'
 
 const Root: Component = () => {
   return (
-    <Html lang='en'>
+    <Html class={css.theme}>
       <Head>
         <Title>SolidStart - Bare</Title>
         <Meta charset='utf-8' />
         <Meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <Body>
+      <Body class='bg:background color:normText'>
         <Suspense>
           <ErrorBoundary>
             <A href='/'>Index</A>
