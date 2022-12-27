@@ -4,8 +4,13 @@
     "dev": "solid-start dev",
     "build": "solid-start build",
     "start": "solid-start start",
+    "format": "ts-standard --fix",
     "test": "vitest",
-    "commit": "((vitest run && ts-standard --fix) || ts-standard --fix) && git add . && git commit -m \"process.env.m\" --no-verify"
+    "test-run": "vitest run",
+    "commit": "((vitest run && ts-standard --fix) || ts-standard --fix) && git add . && git commit -m "
+  },
+  "config": {
+    "m": "commit"
   },
   "type": "module",
   "devDependencies": {
