@@ -5,9 +5,8 @@
     "build": "solid-start build",
     "start": "solid-start start",
     "test": "vitest",
-    "verif": "(vitest run && ts-standard --fix) || ts-standard --fix"
+    "commit": "((vitest run && ts-standard --fix) || ts-standard --fix) && git add . && git commit -m \"process.env.m\" --no-verify"
   },
-  "pre-commit": ["verif"],
   "type": "module",
   "devDependencies": {
     "@master/css.vite": "",
@@ -15,7 +14,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@types/testing-library__jest-dom": "^5.14.5",
     "jsdom": "^20.0.3",
-    "pre-commit": "^1.2.2",
     "solid-start-node": "^0.2.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8",
