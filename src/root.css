@@ -1,10 +1,12 @@
 /*
 Rest css
 */
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   border-width: 0;
-    border-style: solid;
+  border-style: solid;
   margin: 0;
   padding: 0;
 }
@@ -14,10 +16,34 @@ Rest css
 Variables
 */
 :root {
-  --h1size: clamp(2rem, 5vw, 3rem);
-  --h2size: clamp(1.25rem, 3.75vw, 2rem);
-  --psize: clamp(0.75rem, 2.5vw, 1.25rem);
+  --h1size: clamp(1.90rem, 5vw, 3rem);
+  --h2size: clamp(1.15rem, 3.75vw, 2rem);
+  --h3size: clamp(0.75rem, 2.8vw, 1.5rem);
+  --psize: clamp(0.40rem, 2vw, 1rem);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1E2938;
+    --primary: #034896;
+    --secondary: #6E1702;
+    --action: #FFA38F;
+    --text: #F0F5F4;
+    --transparentText: #f0f5f418;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #F0F5F4;
+    --primary: #034896;
+    --secondary: #FDC2B4;
+    --action: #961F03;
+    --text: #1E2938;
+    --transparentText: #1e293818;
+  }
+}
+
 
 /*
 Fonts
@@ -38,10 +64,20 @@ Document defalt conf
 body {
   font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
   overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text);
+  border-color: var(--text);
+  font-weight: 700;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Righteous, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
 }
 
 h1 {
@@ -52,7 +88,12 @@ h2 {
   font-size: var(--h2size);
 }
 
-p, body {
+h2 {
+  font-size: var(--h3size);
+}
+
+p,
+body {
   font-size: var(--psize);
 }
 

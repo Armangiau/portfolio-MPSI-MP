@@ -13,18 +13,17 @@ import {
 } from 'solid-start'
 import '~/root.css'
 import 'master.css'
-import { css } from '~/master'
 import Header from '~/components/Header/Header'
 
 const Root: Component = () => {
   return (
-    <Html class={css.theme}>
+    <Html>
       <Head>
         <Title>SolidStart - Bare</Title>
         <Meta charset='utf-8' />
         <Meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <Body class='bg:background color:text border-color:text'>
+      <Body>
         <Suspense>
           <ErrorBoundary>
             <Header />
