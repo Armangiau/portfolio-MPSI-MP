@@ -31,7 +31,7 @@
     "@solidjs/router": "^0.6.0",
     "solid-js": "^1.6.2",
     "solid-start": "^0.2.0",
-    "ts-standard": "^12.0.2",
+    "ts-standard": "^11.0.0",
     "undici": "^5.11.0"
   }
 }

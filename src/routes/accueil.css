@@ -1,0 +1,19 @@
+#cube-presentation {
+  --cube-size: clamp(0rem, 60vw, 20rem);
+  --half-cs: calc(var(--cube-size)/2);
+}
+
+@keyframes cubePresentationRotation {
+  25% {
+    transform: rotate3d(8, 1, 1, 45deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  75% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(-12deg) rotateY(-18deg) rotateZ(0deg);
+  }
+}

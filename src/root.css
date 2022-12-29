@@ -16,7 +16,7 @@ Rest css
 Variables
 */
 :root {
-  --h1size: clamp(1.90rem, 5vw, 3rem);
+  --h1size: clamp(1.50rem, 5vw, 3rem);
   --h2size: clamp(1.15rem, 3.75vw, 2rem);
   --h3size: clamp(0.75rem, 2.8vw, 1.5rem);
   --psize: clamp(0.40rem, 2vw, 1rem);
@@ -29,6 +29,7 @@ Variables
     --secondary: #6E1702;
     --action: #FFA38F;
     --text: #F0F5F4;
+    --transparentPrimary: #03489618;
     --transparentText: #f0f5f418;
   }
 }
@@ -40,6 +41,7 @@ Variables
     --secondary: #FDC2B4;
     --action: #961F03;
     --text: #1E2938;
+    --transparentPrimary: #03489618;
     --transparentText: #1e293818;
   }
 }
@@ -58,15 +60,21 @@ Fonts
   src: url('/Raleway.woff2');
 }
 
+:root {
+  --raleway: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  --righteous: Righteous, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 /*
 Document defalt conf
 */
 body {
-  font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--raleway);
   overflow-x: hidden;
   background-color: var(--background);
   color: var(--text);
   border-color: var(--text);
+  border-style: solid;
   font-weight: 700;
 }
 
@@ -76,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Righteous, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--righteous);
   font-weight: 300;
 }
 
@@ -100,4 +108,37 @@ body {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+
+/*
+Global keyframes
+*/
+
+@keyframes textAppearFromX {
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes textAppearFromY {
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+.text-appear-from-x {
+  animation: textAppearFromX 300ms ease-out 1 forwards;
+  transform: translateX(-3rem);
+  opacity: 0;
+  display: inline-block;
+}
+
+.text-appear-from-y {
+  animation: textAppearFromY 300ms ease-out 1 forwards;
+  transform: translateY(-3rem);
+  opacity: 0;
+  display: inline-block;
 }
